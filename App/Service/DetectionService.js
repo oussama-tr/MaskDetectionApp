@@ -22,7 +22,7 @@ function uploadVideo(params) {
   data.append("file", video);
 
   return detectionMultipartApiClient()
-    .get('/test')
+    .post('/', data)
     .then((response) => {
       console.log(response.data);
       return null

@@ -40,7 +40,7 @@ function HomeScreen({navigation}) {
 
   const start = () => {
   	// 30 seconds
-  	videoRecorder.current.open({ maxLength: 30 },(data) => {
+  	videoRecorder.current.open({ maxLength: 30, zoom: 0 },(data) => {
       navigation.navigate("Loading", {data : data});
   	});
   }
@@ -58,7 +58,7 @@ function HomeScreen({navigation}) {
 
         </View>
       </TouchableOpacity>
-      <VideoRecorder ref={videoRecorder} />
+      <VideoRecorder ref={videoRecorder} compressQuality={'medium'} orientation="portrait"/>
     </ImageBackground>
   )
 }

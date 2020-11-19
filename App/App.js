@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { SplashScreen, HomeScreen, LoadingScreen } from './Containers/';
+import { SplashScreen, HomeScreen, LoadingScreen, ResultScreen } from './Containers/';
 
 const Stack = createStackNavigator();
 
@@ -13,6 +13,7 @@ const App: () => React$Node = () => {
             <Stack.Screen name="Splash" component={SplashScreen}  options={{headerShown: false}} />
             <Stack.Screen name="Home" component={HomeScreen}  options={{headerShown: false}} />
             <Stack.Screen name="Loading" component={LoadingScreen}  options={{headerShown: false}} />
+            <Stack.Screen name="Result" component={ResultScreen}  options={{headerShown: false}} />
           </>
         </Stack.Navigator>
     </NavigationContainer>
