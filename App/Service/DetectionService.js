@@ -3,7 +3,7 @@ import { Config } from 'App/Config'
 
 const detectionMultipartApiClient = () =>
   axios.create({
-    baseURL: Config.BASE_URL,
+    baseURL: Config.UPLOAD_URL,
     headers: {
       'Content-Type': 'multipart/form-data',
     },
@@ -24,12 +24,12 @@ function uploadVideo(params) {
   return detectionMultipartApiClient()
     .post('/', data)
     .then((response) => {
-      console.log(response.data);
-      return null
+      console.log(response);
+      return response.data;
     })
     .catch(function (error) {
       console.log(error);
-      return error
+      return error;
     })
 }
 

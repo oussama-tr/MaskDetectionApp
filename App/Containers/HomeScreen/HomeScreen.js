@@ -58,7 +58,7 @@ function HomeScreen({navigation}) {
 
         </View>
       </TouchableOpacity>
-      <VideoRecorder ref={videoRecorder} compressQuality={'medium'} orientation="portrait"/>
+      <VideoRecorder ref={videoRecorder} compressQuality={'hight'} orientation="portrait"/>
     </ImageBackground>
   )
 }

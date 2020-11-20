@@ -9,9 +9,11 @@ import { detectionService } from 'App/Service/DetectionService';
 
 const LoadingScreen = (props) => {
 
+
   useEffect(() => {
     async function call() {
       const result = await detectionService.uploadVideo({uri: props.route.params.data.uri});
+      props.navigation.navigate('Result', {result : result});
     }
     call();
   }, []);
